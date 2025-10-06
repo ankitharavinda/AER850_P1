@@ -161,7 +161,7 @@ from sklearn.metrics import confusion_matrix, precision_score, f1_score
 
 #LR
 print("Logistic Regression:")
-for i in range(5):
+for i in range(3):
     print("Predicted Step:", y_pred_train1[i], "Real Step:", y_test.iloc[i])
 
 print("Training accuracy:", mdl1.score(X_train, y_train))
@@ -176,7 +176,7 @@ print(cm_mdl1, "\n")
 
 #RF
 print("Random Forrest:")
-for i in range(5):
+for i in range(3):
     print("Predicted Step:", y_pred_train2[i], "Real Step:", y_test.iloc[i])
 
 print("Training accuracy:", mdl2.score(X_train, y_train))
@@ -191,7 +191,7 @@ print(cm_mdl2, "\n")
 
 #SVM
 print("SVM:")
-for i in range(5):
+for i in range(3):
     print("Predicted Step:", y_pred_train3[i], "Real Step:", y_test.iloc[i])
 
 print("Training accuracy:", mdl3.score(X_train, y_train))
@@ -206,7 +206,7 @@ print(cm_mdl3, "\n")
 
 #DT
 print("Decision Tree with RandomizedSearchCV:")
-for i in range(5):
+for i in range(3):
     print("Predicted Step:", y_pred_train4[i], "Real Step:", y_test.iloc[i])
 
 print("Training accuracy:", mdl4.score(X_train, y_train))
@@ -234,7 +234,7 @@ stack_model.fit(X_train, y_train)
 y_pred_stack = stack_model.predict(X_test)
 
 print("Model Stacked with LR and RF:")
-for i in range(5):
+for i in range(3):
     print("Predicted Step:", y_pred_stack[i], "Real Step:", y_test.iloc[i])
 
 print("Training accuracy:", stack_model.score(X_train, y_train))
