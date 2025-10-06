@@ -10,6 +10,7 @@ X_new = np.array([
 ])
 import warnings
 warnings.filterwarnings("ignore", message="X does not have valid feature names")
+
 predictions = model.predict(X_new)
 
 print("Maintenance Steps:")
