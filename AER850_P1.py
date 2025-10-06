@@ -53,3 +53,13 @@ plt.show()
 #findings show that most of the steps are centered around 7,8,9, meaning that it 
 #will lead to bias and requiring addtional optimization.
 
+#Step 3
+corr = data[["X", "Y", "Z", "Step"]].corr(method="pearson")
+print("Corr Matrix:\n", corr.round(4), "\n")
+
+sb.heatmap(corr, annot=True, cmap="Reds", vmin= -1)
+plt.title("correlation matrix")
+
+# X has the strongest negative corrilation with the step, moderately with Y and 
+# weakly with Z This means X will have the greatest impact on the model’s 
+# predictions, while Y and Z have smaller positive effects. 
